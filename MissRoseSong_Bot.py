@@ -13,7 +13,7 @@ import os
 from config import Config
 
 bot = Client(
-    'Rose',
+    'MissRose',
     bot_token = Config.BOT_TOKEN,
     api_id = Config.API_ID,
     api_hash = Config.API_HASH
@@ -30,21 +30,21 @@ def time_to_seconds(time):
 ## Commands --------------------------------
 @bot.on_message(filters.command(['start']))
 def start(client, message):
-    darkprince = f'👋 Hello @{message.from_user.username}\n\n [👋🌺](https://telegra.ph/file/56db058233ae7b307b86b.jpg)\n I\'m Meenuty, I can download songs from YouTube. Type /s song name:'
+    darkprince = f'👋 Hello @{message.from_user.username}\n\n [😌🍀🤚](https://telegra.ph/file/86cc2e654b1157f12b94f.jpg)\n I\'m Rose, I can upload songs from YouTube. Type /a song name:'
     message.reply_text(
         text=darkprince, 
         quote=False,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Owner🌺', url='https://t.me/tom_jerry_m'),
-                    InlineKeyboardButton('Source💿', url='https://github.com/killersparrow0/MissRose/edit/prince/MissRoseSong_Bot.py')
+                    InlineKeyboardButton('Owner🎸', url='https://t.me/mr_dark_prince'),
+                    InlineKeyboardButton('Source💿', url='https://github.com/Mr-Dark-Prince/MissRose')
                 ]
             ]
         )
     )
 
-@bot.on_message(filters.command(['s']))
+@bot.on_message(filters.command(['a']))
 def a(client, message):
     query = ''
     for i in message.command[1:]:
@@ -88,24 +88,13 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("⏬ Downloading")
-    m.edit("□ □ □ □ □ □ □ □ □ □ 0%")
-    m.edit("■ □ □ □ □ □ □ □ □ □ 10%")
-    m.edit("■ ■ □ □ □ □ □ □ □ □ 20%")
-    m.edit("■ ■ ■ □ □ □ □ □ □ □ 30%")
-    m.edit("■ ■ ■ ■ □ □ □ □ □ □ 40%")
-    m.edit("■ ■ ■ ■ ■ □ □ □ □ □ 50%")
-    m.edit("■ ■ ■ ■ ■ ■ □ □ □ □ 60%")
-    m.edit("■ ■ ■ ■ ■ ■ ■ □ □ □ 70%")
-    m.edit("■ ■ ■ ■ ■ ■ ■ ■ □ □ 80%")
-    m.edit("■ ■ ■ ■ ■ ■ ■ ■ ■ □ 90%")
-    m.edit("■ ■ ■ ■ ■ ■ ■ ■ ■ ■ 100%")
+    m.edit("⏬ Downloading.")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎧 𝐓𝐢𝐭𝐥𝐞 : [{title[:35]}]({link})\n⏳ 𝐃𝐮𝐫𝐚𝐭𝐢𝐨𝐧 : `{duration}`\n🎬 𝐒𝐨𝐮𝐫𝐜𝐞 : [Youtube](https://youtu.be/3pN0W4KzzNY)\n👁‍🗨 𝐕𝐢𝐞𝐰𝐬 : `{views}`'
+        rep = f'🎧 **Title**: [{title[:35]}]({link})\n⏳ **Duration**: `{duration}`\n👁‍🗨 **Views**: `{views}`'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -114,9 +103,6 @@ def a(client, message):
         m.delete()
     except Exception as e:
         m.edit('❌ Error')
-        m.edit('Error❌')
-        m.edit('❌ Error')
-        m.edit('Error❌')
         print(e)
     try:
         os.remove(audio_file)
