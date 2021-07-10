@@ -13,7 +13,7 @@ import os
 from config import Config
 
 bot = Client(
-    'MissRose',
+    'Meenakshi',
     bot_token = Config.BOT_TOKEN,
     api_id = Config.API_ID,
     api_hash = Config.API_HASH
@@ -30,7 +30,7 @@ def time_to_seconds(time):
 ## Commands --------------------------------
 @bot.on_message(filters.command(['start']))
 def start(client, message):
-    darkprince = f'👋 Hello @{message.from_user.username}\n\n [😌🍀🤚](https://telegra.ph/file/86cc2e654b1157f12b94f.jpg)\n I\'m Rose, I can upload songs from YouTube. Type /a song name:'
+    darkprince = f'👋 Hello @{message.from_user.username}\n\n [😌🍀🤚](https://telegra.ph/file/86cc2e654b1157f12b94f.jpg)\n I\'m Meenuty, I can download songs from YouTube. Type /s song name:'
     message.reply_text(
         text=darkprince, 
         quote=False,
@@ -44,7 +44,7 @@ def start(client, message):
         )
     )
 
-@bot.on_message(filters.command(['a']))
+@bot.on_message(filters.command(['s']))
 def a(client, message):
     query = ''
     for i in message.command[1:]:
@@ -88,7 +88,9 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("⏬ Downloading.")
+    m.edit("⏬ Downloading...")
+    m.edit("🔽 Downloading..")
+    m.edit("⏬ Downloading...")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
