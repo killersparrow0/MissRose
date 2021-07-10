@@ -100,8 +100,6 @@ def a(client, message):
     m.edit("■ ■ ■ ■ ■ ■ ■ ■ □ □ 80%")
     m.edit("■ ■ ■ ■ ■ ■ ■ ■ ■ □ 90%")
     m.edit("■ ■ ■ ■ ■ ■ ■ ■ ■ ■ 100%")
-    m.edit("□ □ □ □ □ □ □ □ □ □")
-    m.edit("■ ■ ■ ■ ■ ■ ■ ■ ■ ■")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
