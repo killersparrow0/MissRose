@@ -44,7 +44,7 @@ def start(client, message):
         )
     )
 
-@bot.on_message(filters.command(['a']))
+@bot.on_message(filters.command(['s']))
 def a(client, message):
     query = ''
     for i in message.command[1:]:
@@ -90,8 +90,8 @@ def a(client, message):
         return
     m.edit("|Processing...")
     m.edit("/ Processing..")
-    m.edit("- Processing..")
     m.edit("\ Processing..")
+    m.edit("| Processing..")
     m.edit("□ □ □ □ □ □ □ □ □ □ 0%")
     m.edit("■ □ □ □ □ □ □ □ □ □ 10%")
     m.edit("■ ■ □ □ □ □ □ □ □ □ 20%")
