@@ -90,17 +90,6 @@ def a(client, message):
         return
     m.edit("⏬ Downloading...")
     m.edit(“■”)
-    m.edit(“■■”)
-    m.edit(“■■■”)
-    m.edit(“■■■■”)
-    m.edit(“■■■■■”)
-    m.edit(“■■■■■■”)
-    m.edit(“■■■■■■■”)
-    m.edit(“■■■■■■■■”)
-    m.edit(“■■■■■■■■■”)
-    m.edit(“■■■■■■■■■■”)
-    m.edit(“■■■■■■■■■■■”)
-    m.edit(“■■■■■■■■■■■□”)
     m.edit(“■■■■■■■■■■■□□”)
     m.edit(“■■■■■■■■■■■□□□“)
     try:
