@@ -88,7 +88,8 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("@-@")
+    m.edit("⏳Processing..")
+    m.edit("⌛️Processing..")
     m.edit("⏳Processing..")
     m.edit("⌛️Processing..")
     m.edit("□ □ □ □ □ □ □ □ □ □ 0%")
@@ -102,12 +103,13 @@ def a(client, message):
     m.edit("■ ■ ■ ■ ■ ■ ■ ■ □ □ 80%")
     m.edit("■ ■ ■ ■ ■ ■ ■ ■ ■ □ 90%")
     m.edit("■ ■ ■ ■ ■ ■ ■ ■ ■ ■ 100%")
+   
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎧 **Title**: [{title[:35]}]({Link})\n⌛️ **Duration**: `{duration}`\n👁 **Views**: `{views}`\n🎬 𝐒𝐨𝐮𝐫𝐜𝐞 : [Youtube](https://youtube.com/channel/UC8zUxxo11sqJZTkVyqj3OwQ)\n✨𝗠𝗮𝗶𝗻𝘁𝗮𝗶𝗻𝗲𝗱 𝗯𝘆 : @tom_jerry_m '
+        rep = f'🎧 **Title**: [{title[:35]}]({link})\n⌛️ **Duration**: `{duration}`\n👁 **Views**: `{views}`\n🎬 𝐒𝐨𝐮𝐫𝐜𝐞 : [Youtube](https://youtube.com/channel/UC8zUxxo11sqJZTkVyqj3OwQ)\n💌 𝐁𝐲 : @tom_jerry_m '
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -115,8 +117,8 @@ def a(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit('E ■ ■ ■')
-        m.edit('ERR ■ ■') 
+        m.edit('E____')
+        m.edit('E_R_R')
         m.edit('ERROR')
         m.edit('❌ ERROR REPORT HERE NOW ⬇️')
         print(e)
