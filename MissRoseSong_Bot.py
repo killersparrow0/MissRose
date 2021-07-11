@@ -64,16 +64,16 @@ def a(client, message):
         try:
             link = f"https://youtube.com{results[0]['url_suffix']}"
             # print(results)
-            title = results[0]["title"]
-            thumbnail = results[0]["thumbnails"][0]
-            duration = results[0]["duration"]
+            title = results[1]["title"]
+            thumbnail = results[1]["thumbnails"][1]
+            duration = results[1]["duration"]
 
             ## UNCOMMENT THIS IF YOU WANT A LIMIT ON DURATION. CHANGE 1800 TO YOUR OWN PREFFERED DURATION AND EDIT THE MESSAGE (30 minutes cap) LIMIT IN SECONDS
             # if time_to_seconds(duration) >= 1800:  # duration limit
             #     m.edit("Exceeded 30mins cap")
             #     return
 
-            views = results[0]["views"]
+            views = results[1]["views"]
             thumb_name = f'thumb{message.message_id}.jpg'
             thumb = requests.get(thumbnail, allow_redirects=True)
             open(thumb_name, 'wb').write(thumb.content)
@@ -84,7 +84,7 @@ def a(client, message):
             return
     except Exception as e:
         m.edit(
-            "✖️ Found Nothing. Sorry.\n\nTry another keywork or maybe spell it properly."
+            "✖️ Found Nothing. Sorry.\n\nTry another keywork or maybe spell it properly 😉."
         )
         print(str(e))
         return
@@ -106,15 +106,15 @@ def a(client, message):
    
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-            info_dict = ydl.extract_info(link, download=False)
+            info_dict = ydl.extract_info(link, download=True)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎧 **Title**: [{title[:35]}]({link})\n⌛️ **Duration**: `{duration}`\n👁 **Views**: `{views}`\n🎬 𝐒𝐨𝐮𝐫𝐜𝐞 : [Youtube](https://youtube.com/channel/UC8zUxxo11sqJZTkVyqj3OwQ)\n💌 𝐁𝐲 : @tom_jerry_m '
+        rep = f'🎧 **Title**: [{title[:35]}]({https://youtube.com/channel/UC8zUxxo11sqJZTkVyqj3OwQ})\n⌛️ **Duration**: `{duration}`\n👁 **Views**: `{views}`\n🎬 𝐒𝐨𝐮𝐫𝐜𝐞 : [Youtube](https://youtube.com/channel/UC8zUxxo11sqJZTkVyqj3OwQ)\n💌 𝐁𝐲 : @tom_jerry_m '
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
             secmul *= 60
-        message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name)
+        message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=True, title=title, duration=dur, thumb=thumb_name) your 
         m.delete()
     except Exception as e:
         m.edit('E____')
