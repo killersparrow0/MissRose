@@ -51,7 +51,7 @@ def a(client, message):
         query += ' ' + str(i)
     print(query)
     m = message.reply('🔎 Searching the song...')
-    ydl_opts = {"format": "bestaudio[ext=flac]"}
+    ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
         count = 0
