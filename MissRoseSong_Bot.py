@@ -50,7 +50,7 @@ def a(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('🔎 Searching the song...')
+    m = message.reply('🔎 Searching the 🎧song...')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -75,12 +75,12 @@ def a(client, message):
 
             views = results[0]["views"]
             thumb_name = f'thumb{message.message_id}.jpg'
-            thumb = requests.get(thumbnail, allow_redirects=True)
+            thumb = requests.get(thumbnail, allow_redirects=False)
             open(thumb_name, 'wb').write(thumb.content)
 
         except Exception as e:
             print(e)
-            m.edit('Found nothing. Try changing the spelling a little.')
+            m.edit('Found nothing. Try changing the spelling a little😊.')
             return
     except Exception as e:
         m.edit(
