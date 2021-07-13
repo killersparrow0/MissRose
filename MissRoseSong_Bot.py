@@ -100,9 +100,9 @@ def a(client, message):
     m.edit("───────〇──")
     m.edit("────────〇─")
     m.edit("─────────〇")
-    m.edit("𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐜𝐨𝐦𝐩𝐥𝐞𝐭𝐞𝐝 𝐖𝐢𝐭𝐡𝐢𝐧 𝟑 𝐬𝐞𝐜 ヅ")
-    m.edit("Ｄｏｗｎｌｏａｄ ｃｏｍｐｌｅｔｅｄ Ｗｉｔｈｉｎ ２ ｓｅｃヅ")
-    m.edit("𝓓𝓸𝔀𝓷𝓵𝓸𝓪𝓭 𝓬𝓸𝓶𝓹𝓵𝓮𝓽𝓮𝓭 𝓦𝓲𝓽𝓱𝓲𝓷 1 𝓼𝓮𝓬ヅ")
+    m.edit("Ｄｏｗｎｌｏａｄ ｃｏｍｐｌｅｔｅｄ Ｗｉｔｈｉｎ 🕒３ ｓｅｃヅ")
+    m.edit("Ｄｏｗｎｌｏａｄ ｃｏｍｐｌｅｔｅｄ Ｗｉｔｈｉｎ 🕕２ ｓｅｃヅ")
+    m.edit("Ｄｏｗｎｌｏａｄ ｃｏｍｐｌｅｔｅｄ Ｗｉｔｈｉｎ 🕘１ ｓｅｃヅ")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
