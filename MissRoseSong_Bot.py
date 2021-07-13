@@ -108,7 +108,7 @@ def a(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎧 **Title**: [{title[:35]}]({link})\n⌛️ **Duration**: `{duration}`\n👁 **Views**: `{views}`\n🎬 𝐒𝐨𝐮𝐫𝐜𝐞 : [Youtube](https://youtube.com/channel/UC8zUxxo11sqJZTkVyqj3OwQ)\n𝗠𝗮𝗶𝗻𝘁𝗮𝗶𝗻𝗲𝗱 💖 𝗯𝘆 : @tom_jerry_m '
+        rep = f'🎧 **Title**: [{𝗧𝗶𝘁𝗹𝗲[:35]}]({link})\n⌛️ **Duration**: `{𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻}`\n👁 **Views**: `{𝗩𝗶𝗲𝘄𝘀}`\nℹ️ 𝗦𝗼𝘂𝗿𝗰𝗲 : [Youtube](https://youtube.com/channel/UC8zUxxo11sqJZTkVyqj3OwQ)\n👨🏽‍🔧 𝗠𝗮𝗶𝗻𝘁𝗮𝗶𝗻𝗲𝗱 💖 𝗯𝘆 : @tom_jerry_m '
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
