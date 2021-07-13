@@ -84,7 +84,7 @@ def a(client, message):
             return
     except Exception as e:
         m.edit(
-            "✖️ Found Nothing. Sorry.\n\nTry another keywork or maybe spell it properly."
+            "✖️ Found Nothing. Sorry.\n\nTry another keywork or maybe spell it properly. ( ´•︵•` ) "
         )
         print(str(e))
         return
@@ -92,23 +92,15 @@ def a(client, message):
     m.edit("⌛️Processing..")
     m.edit("⏳Processing..")
     m.edit("⌛️Processing..")
-    m.edit("〇─────── \
-          ⇄ ◃◃ ⅠⅠ ▹▹ ↻")
-    m.edit("─〇────── \
-          ⇄ ◃◃ ⅠⅠ ▹▹ ↻")
-    m.edit("──〇───── \
-          ⇄ ◃◃ ⅠⅠ ▹▹ ↻")
-    m.edit("───〇──── \
-          ⇄ ◃◃ ⅠⅠ ▹▹ ↻")
-    m.edit("────〇─── \
-          ⇄ ◃◃ ⅠⅠ ▹▹ ↻")
-    m.edit("─────〇── \
-          ⇄ ◃◃ ⅠⅠ ▹▹ ↻")
-    m.edit("──────〇─ \
-          ⇄ ◃◃ ⅠⅠ ▹▹ ↻")
-    m.edit("───────〇 \
-          ⇄ ◃◃ ⅠⅠ ▹▹ ↻")
-   m.edit("𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚌𝚘𝚖𝚙𝚕𝚎𝚝𝚎𝚍 ✔️")
+    m.edit("〇───────")
+    m.edit("─〇──────")
+    m.edit("──〇─────")
+    m.edit("───〇────")
+    m.edit("────〇───")
+    m.edit("─────〇──")
+    m.edit("──────〇─")
+    m.edit("───────〇")
+    m.edit("𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝚌𝚘𝚖𝚙𝚕𝚎𝚝𝚎𝚍 ヅ")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
