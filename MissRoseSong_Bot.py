@@ -90,8 +90,9 @@ def a(client, message):
         return
     m.edit("⏳Processing..")
     m.edit("⌛️Processing..")
-    m.edit("⏳Processing..")
-    m.edit("⌛️Processing..")
+    m.edit("📁")
+    m.edit("📂")
+    m.edit("📁")
     m.edit("〇─────────")
     m.edit("───〇──────")
     m.edit("────〇─────")
@@ -100,16 +101,6 @@ def a(client, message):
     m.edit("───────〇──")
     m.edit("────────〇─")
     m.edit("─────────〇")
-    m.edit("🔽")
-    m.edit("⏬")
-    m.edit("🔽")
-    m.edit("⏬")
-    m.edit("🔽")
-    m.edit("⏬")
-    m.edit("🔽")
-    m.edit("⏬")
-    m.edit("⬇️")
-    m.edit("DOWNLOAD SUCCESSFUL ✅")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
