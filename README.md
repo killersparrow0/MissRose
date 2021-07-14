@@ -4,7 +4,7 @@
 </p>
 
 
-# MissRose
+# Meenakshi✨
 💡Telegram bot for Downloading Songs From YouTube 📺 
 
 ![logo](https://telegra.ph/file/04828a131605f87a0cc7b.gif)
