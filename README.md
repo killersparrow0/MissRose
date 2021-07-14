@@ -7,8 +7,8 @@
 # MissRose
 💡Telegram bot for Downloading Songs From YouTube 📺 
 
-![logo](https://telegra.ph/file/86cc2e654b1157f12b94f.jpg)
-# Reach me on Telegram [Rose 🎶](https://t.me/missrosesong_bot)
+![logo](https://telegra.ph/file/04828a131605f87a0cc7b.gif)
+# Reach me on Telegram [song lovers🎵🎸🎧](https://telegram.me/movies_songs_tj)
 
 
 ## 💡 Deploy This Bot To Heroku ❓️
