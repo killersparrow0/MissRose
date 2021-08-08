@@ -65,7 +65,7 @@ def a(client, message):
             link = f"https://youtube.com{results[0]['url_suffix']}"
             # print(results)
             title = results[0]["title"]
-            thumbnail = results[0]["thumbnails"]
+            thumbnail = results[0]["thumbnails"][1]
             duration = results[0]["duration"]
 
             ## UNCOMMENT THIS IF YOU WANT A LIMIT ON DURATION. CHANGE 1800 TO YOUR OWN PREFFERED DURATION AND EDIT THE MESSAGE (30 minutes cap) LIMIT IN SECONDS
