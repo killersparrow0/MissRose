@@ -90,12 +90,15 @@ def a(client, message):
         return
     m.edit("⏳processing••••")
     m.edit("⌛️Processing••")
-    m.edit("██▒▒▒▒▒▒▒▒▒▒")
-    m.edit("████▒▒▒▒▒▒▒▒")
-    m.edit("██████▒▒▒▒▒▒")
-    m.edit("████████▒▒▒▒")
-    m.edit("██████████▒▒")
-    m.edit("████████████")
+    m.edit("🔴")
+    m.edit("🟠")
+    m.edit("🟡")
+    m.edit("🟢")
+    m.edit("🔵")
+    m.edit("🟣")
+    m.edit("🟤")
+    m.edit("⚪️")
+    m.edit("🎧")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
