@@ -65,7 +65,7 @@ def a(client, message):
             link = f"https://youtube.com{results[0]['url_suffix']}"
             # print(results)
             title = results[0]["title"]
-            thumbnail = results[0]["thumbnails"][1]
+            thumbnail = results[0]["thumbnails"][0]
             duration = results[0]["duration"]
 
             ## UNCOMMENT THIS IF YOU WANT A LIMIT ON DURATION. CHANGE 1800 TO YOUR OWN PREFFERED DURATION AND EDIT THE MESSAGE (30 minutes cap) LIMIT IN SECONDS
@@ -98,7 +98,8 @@ def a(client, message):
     m.edit("⬛️⬛️⬛️⬛️⬛️⬛️▫️▫️▫️")
     m.edit("⬛️⬛️⬛️⬛️⬛️⬛️⬛️▫️▫️")
     m.edit("⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️▫️")
-    m.edit("🟥🟧🟨🟩🟦🟪⬛️⬜️🟫")
+    m.edit("🟥🟧🟨🟩🟦🟪🟫⬜️⬛️")
+    m.edit("••🎵DOWNLOADING🎵••")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
